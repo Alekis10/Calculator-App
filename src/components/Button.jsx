@@ -7,11 +7,13 @@ function handleClick (event) {
     props.clickedNum(event);
 };
 
-return (
-<button name={props.name} onClick={handleClick}>
-    {props.name}
-    {/* {console.log( props.name )} */}
-</button>
+    return (
+        <button className="btn-numbers" name={props.name} onClick={handleClick}>
+            {props.name}
+        </button>
+        
+        
+
 );
 }
 

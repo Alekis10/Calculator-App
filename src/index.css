@@ -17,6 +17,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--grey);
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 }
 
 .container {
@@ -34,16 +36,21 @@ body {
 
 .keypad {
     display: grid;
-    height: 60vh;
+    height: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(90px, auto);
 }
 
+.display {
+    height: 8rem;
+    padding-top: .5rem;
+}
+
 input[type ="text"] {
-    height: 90px;
+    height: 3.5rem;
     width: 420px;
     background-color: var(--grey);
-    padding: 2px;
+    padding: 1rem;
     border: 0px;
     color: white;
     text-align: right;
@@ -69,6 +76,31 @@ input[type ="text"] {
     color: var(--dark-blue);
 }
 
+#times{ 
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+#substract{
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+#addition {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+#zero {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+#decimal {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+
 button {
     margin: 5px;
     font-size: 1.4rem;
@@ -90,6 +122,10 @@ input:hover,
 button:focus,
 input:active {
     outline: none;
+}
+
+.btn-numbers {
+    justify-items: end;
 }
 
 .btn-highlight {
