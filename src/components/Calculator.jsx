@@ -7,13 +7,14 @@ function Calculator() {
 const [answer, setAnswer] = useState("");
 const [input, setInput] = useState("");
 
+
   //input
-const inputHandler = (event) => {
+const inputHandler = (event, value) => {
     if (answer === "Invalid Input!!") return;
     let val = event.target.name;
 
     let str = input + val;
-    if (str.length > 10) return;
+    if ( str.length > 10 ) return;
 
     if (answer !== "") {
     setInput(answer + val);
@@ -60,10 +61,10 @@ return (
         <button className="btn-highlight" onClick={backspace} id="backspace">
             C
         </button>
-        <button
+            <button
             className="btn-highlight"
             id="divide"
-            name="/"
+            name={input === "" ? null : "/"}
             onClick={inputHandler}
         >
             &divide;
@@ -77,8 +78,9 @@ return (
         <button
             className="btn-highlight"
             id="times"
-            name="*"
+            name={input === "" ? null : "*"}
             onClick={inputHandler}
+            
         >
             &times;
         </button>
@@ -86,7 +88,7 @@ return (
         <button
             className="btn-highlight"
             id="substract"
-            name="-"
+            name= "-"
             onClick={inputHandler}
         >
         &ndash;
@@ -95,7 +97,7 @@ return (
         <button
             className="btn-highlight"
             id="addition"
-            name="+"
+            name={input === "" ? null : "+"}
             onClick={inputHandler}
         >
         +
