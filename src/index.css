@@ -12,13 +12,12 @@
 }
 
 body {
-    background-color: var(--bg);
+    background-color:black;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--grey);
-    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
 }
 
 .container {
